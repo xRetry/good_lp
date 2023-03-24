@@ -433,9 +433,9 @@ impl IntoIterator for ProblemVariables {
 /// A problem without constraints.
 /// Created with [ProblemVariables::optimise].
 pub struct UnsolvedProblem {
-    pub(crate) objective: Expression,
-    pub(crate) direction: ObjectiveDirection,
-    pub(crate) variables: ProblemVariables,
+    pub objective: Expression,
+    pub direction: ObjectiveDirection,
+    pub variables: ProblemVariables,
 }
 
 impl UnsolvedProblem {
