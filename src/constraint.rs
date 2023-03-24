@@ -7,9 +7,9 @@ use std::ops::{Shl, Shr, Sub};
 /// A constraint represents a single (in)equality that must hold in the solution.
 pub struct Constraint {
     /// The expression that is constrained to be null or negative
-    pub(crate) expression: Expression,
+    pub expression: Expression,
     /// if is_equality, represents expression == 0, otherwise, expression <= 0
-    pub(crate) is_equality: bool,
+    pub is_equality: bool,
 }
 
 impl Constraint {
