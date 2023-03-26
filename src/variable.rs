@@ -259,7 +259,7 @@ pub fn variable() -> VariableDefinition {
 /// Each problem has a unique type, which prevents using the variables
 /// from one problem inside an other one.
 /// Instances of this type should be created exclusively using the [variables!] macro.
-#[derive(Default)]
+#[derive(Default, Clone)]
 pub struct ProblemVariables {
     pub variables: Vec<VariableDefinition>,
 }
@@ -432,6 +432,7 @@ impl IntoIterator for ProblemVariables {
 
 /// A problem without constraints.
 /// Created with [ProblemVariables::optimise].
+#[derive(Clone)]
 pub struct UnsolvedProblem {
     pub objective: Expression,
     pub direction: ObjectiveDirection,
