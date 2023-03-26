@@ -9,6 +9,7 @@ use crate::variable::{FormatWithVars, Variable};
 use crate::{Constraint, Solution};
 
 /// An linear expression without a constant component
+#[derive(Clone)]
 pub struct LinearExpression {
     pub(crate) coefficients: HashMap<Variable, f64>,
 }
