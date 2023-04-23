@@ -83,6 +83,10 @@ impl Variable {
     fn at(index: usize) -> Self {
         Self { index }
     }
+
+    pub fn new(index: usize) -> Self {
+        Self { index }
+    }
 }
 
 impl Variable {
